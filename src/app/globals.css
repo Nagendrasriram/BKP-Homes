@@ -1,26 +1,92 @@
 @import "tailwindcss";
 
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-playfair), ui-serif, Georgia, serif;
+  
+  --color-luxury-black: #0F0F0F;
+  --color-luxury-cream: #FAF9F6;
+  --color-luxury-beige: #DFD3C3;
+  --color-luxury-walnut: #4A3525;
+  --color-luxury-gold: #C5A059;
+  --color-luxury-gold-dark: #A7823C;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0F0F0F;
+  --foreground: #FAF9F6;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* Custom Scrollbar for Luxury Showroom feel */
+::-webkit-scrollbar {
+  width: 8px;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+::-webkit-scrollbar-track {
+  background: #0B0B0B;
+}
+::-webkit-scrollbar-thumb {
+  background: #2A1F16;
+  border-radius: 4px;
+  border: 2px solid #0B0B0B;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #C5A059;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #0F0F0F;
+  color: #FAF9F6;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
 }
+
+/* Premium micro-animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+@keyframes pulse-gold {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(197, 160, 89, 0.5);
+  }
+  50% {
+    transform: scale(1.05);
+    box-shadow: 0 0 0 12px rgba(197, 160, 89, 0);
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-pulse-gold {
+  animation: pulse-gold 2.5s infinite;
+}
+
+.glassmorphism {
+  background: rgba(15, 15, 15, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(197, 160, 89, 0.1);
+}
+
+.glassmorphism-light {
+  background: rgba(250, 249, 246, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #F0E6D2 0%, #C5A059 50%, #8C6A2E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #E6D2B5 0%, #C5A059 100%);
+}
+
