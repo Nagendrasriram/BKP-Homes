@@ -60,7 +60,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col bg-luxury-black text-luxury-cream font-sans" suppressHydrationWarning={true}>
+      <body className="min-h-full w-full overflow-x-hidden flex flex-col bg-luxury-black text-luxury-cream font-sans" suppressHydrationWarning={true}>
         {children}
       </body>
     </html>

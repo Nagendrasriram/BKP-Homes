@@ -13,7 +13,7 @@ export default function Tagline() {
     <section 
       id="tagline" 
       ref={ref}
-      className="relative min-h-[50vh] flex flex-col justify-center items-center py-24 px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 overflow-hidden"
+      className="relative min-h-[40vh] flex flex-col justify-center items-center py-16 md:py-24 px-4 sm:px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 overflow-hidden"
     >
       {/* Abstract Background Aura */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-luxury-gold/5 rounded-full blur-[120px] pointer-events-none" />
@@ -32,7 +32,7 @@ export default function Tagline() {
           <Star className="w-3 h-3 fill-luxury-gold" />
         </motion.div>
 
-        <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wide leading-tight text-luxury-cream">
+        <h2 className="font-serif text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-light tracking-wide leading-tight text-luxury-cream">
           {"Where Artistry Meets Architectural Grandeur".split(" ").map((word, idx) => (
             <motion.span
               key={idx}
@@ -50,7 +50,7 @@ export default function Tagline() {
           initial={{ y: 20, opacity: 0 }}
           animate={isInView ? { y: 0, opacity: 0.75 } : {}}
           transition={{ duration: 1, delay: 0.6 }}
-          className="max-w-3xl mx-auto text-sm sm:text-base md:text-lg font-light text-luxury-beige leading-relaxed tracking-wide"
+          className="max-w-3xl mx-auto text-xs sm:text-base md:text-lg font-light text-luxury-beige leading-relaxed tracking-wide"
         >
           For over two decades, BKP Homes has crafted bespoke statement furniture and luxury residential spaces in Hyderabad. We merge high-fashion architecture with raw, organic materials—solid walnut wood, Italian marble, and hand-finished brass accents—to create unique heirlooms for distinguished homes.
         </motion.p>

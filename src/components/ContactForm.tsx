@@ -36,23 +36,23 @@ export default function ContactForm() {
   return (
     <section 
       id="contact" 
-      className="py-28 px-6 md:px-12 bg-luxury-black border-b border-white/5 relative overflow-hidden"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-luxury-black border-b border-white/5 relative overflow-hidden"
     >
       {/* Background Decorative Element */}
       <div className="absolute bottom-0 right-0 w-[450px] h-[450px] bg-luxury-gold/3 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-12 items-stretch">
+      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-8 md:gap-12 items-stretch">
         
         {/* Left Side: Contact details */}
-        <div className="col-span-12 lg:col-span-5 flex flex-col justify-between space-y-12">
-          <div className="space-y-4">
+        <div className="col-span-12 lg:col-span-5 flex flex-col justify-between space-y-8 md:space-y-12">
+          <div className="space-y-3 md:space-y-4">
             <span className="text-[10px] tracking-[0.3em] uppercase text-luxury-gold font-semibold font-sans block">
               Schedule an Appointment
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-luxury-cream">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-luxury-cream">
               Visit Our Showroom
             </h2>
-            <p className="text-sm md:text-base text-luxury-beige/70 font-light leading-relaxed max-w-md">
+            <p className="text-xs sm:text-sm md:text-base text-luxury-beige/70 font-light leading-relaxed max-w-md">
               Experience the weight, the grain, and the stitching firsthand. Book a private consultation with our principal interior architect.
             </p>
           </div>
@@ -118,7 +118,7 @@ export default function ContactForm() {
         </div>
 
         {/* Right Side: Consultation Form Card */}
-        <div className="col-span-12 lg:col-span-7 rounded-3xl glassmorphism p-8 md:p-12 border border-luxury-gold/20 shadow-2xl flex flex-col justify-center">
+        <div className="col-span-12 lg:col-span-7 rounded-3xl glassmorphism p-5 sm:p-8 md:p-12 border border-luxury-gold/20 shadow-2xl flex flex-col justify-center">
           
           <AnimatePresence mode="wait">
             {!isSubmitted ? (

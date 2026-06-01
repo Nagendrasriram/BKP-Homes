@@ -38,7 +38,7 @@ export default function Testimonials() {
 
   return (
     <section 
-      className="py-28 px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 relative overflow-hidden"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 relative overflow-hidden"
     >
       {/* Decorative light ambient ring */}
       <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[350px] h-[350px] bg-luxury-gold/2 rounded-full blur-[80px] pointer-events-none" />
@@ -71,7 +71,7 @@ export default function Testimonials() {
               </div>
 
               {/* Quote text */}
-              <p className="font-serif text-xl sm:text-2xl md:text-3xl font-light text-luxury-cream leading-relaxed tracking-wide italic">
+              <p className="font-serif text-lg sm:text-2xl md:text-3xl font-light text-luxury-cream leading-relaxed tracking-wide italic">
                 &ldquo;{TESTIMONIALS[index].quote}&rdquo;
               </p>
 

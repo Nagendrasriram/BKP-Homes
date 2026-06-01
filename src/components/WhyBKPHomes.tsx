@@ -35,19 +35,19 @@ export default function WhyBKPHomes() {
   return (
     <section 
       ref={ref}
-      className="py-28 px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 relative overflow-hidden"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto space-y-16 relative z-10">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16 relative z-10">
         
         {/* Header */}
         <div className="text-center space-y-4 max-w-2xl mx-auto">
           <span className="text-[10px] tracking-[0.3em] uppercase text-luxury-gold font-semibold font-sans block">
             Our Standard
           </span>
-          <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-luxury-cream">
+          <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-luxury-cream">
             The Pillars of BKP Quality
           </h2>
-          <p className="text-sm text-luxury-beige/70 font-light leading-relaxed">
+          <p className="text-xs sm:text-sm text-luxury-beige/70 font-light leading-relaxed">
             From the raw timber log selection to the final hand-stitching of premium fabrics, we honor the traditional methods of furniture crafting.
           </p>
         </div>
@@ -60,7 +60,7 @@ export default function WhyBKPHomes() {
               initial={{ y: 30, opacity: 0 }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: idx * 0.1, ease: "easeOut" }}
-              className="p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-luxury-gold/30 hover:bg-white/5 transition-all duration-300 group flex flex-col justify-between min-h-[280px]"
+              className="p-6 sm:p-8 rounded-2xl border border-white/5 bg-white/2 hover:border-luxury-gold/30 hover:bg-white/5 transition-all duration-300 group flex flex-col justify-between min-h-[260px] sm:min-h-[280px]"
             >
               <div className="space-y-6">
                 {/* Icon wrapper */}

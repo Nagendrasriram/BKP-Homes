@@ -41,45 +41,42 @@ export default function Transformations() {
   return (
     <section 
       id="transformations" 
-      className="py-28 px-6 md:px-12 bg-luxury-black border-b border-white/5"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-luxury-black border-b border-white/5"
     >
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
         
         {/* Section Header */}
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-white/5 pb-10">
-          <div className="space-y-4">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 border-b border-white/5 pb-6 md:pb-10">
+          <div className="space-y-3 md:space-y-4">
             <span className="text-[10px] tracking-[0.3em] uppercase text-luxury-gold font-semibold font-sans block">
               Residential Transformations
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-luxury-cream">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-luxury-cream">
               Bespoke Spaces
             </h2>
           </div>
-          <p className="max-w-md text-sm text-luxury-beige/70 font-light leading-relaxed">
+          <p className="max-w-md text-xs sm:text-sm text-luxury-beige/70 font-light leading-relaxed">
             Discover how we turn empty spaces into sophisticated architectural statement homes. Take a look at our signature turnkey transformations in Hyderabad.
           </p>
         </div>
 
         {/* Project Section layout */}
-        <div className="grid grid-cols-12 gap-10 items-stretch">
+        <div className="grid grid-cols-12 gap-6 md:gap-10 items-stretch">
           
           {/* Project Switcher List */}
-          <div className="col-span-12 lg:col-span-4 flex flex-col justify-center space-y-3">
-            <p className="text-[10px] uppercase tracking-[0.25em] text-luxury-gold font-semibold font-sans mb-2 pl-2">
-              Select Project
-            </p>
+          <div className="col-span-12 lg:col-span-4 flex flex-row lg:flex-col overflow-x-auto lg:overflow-x-visible gap-3 pb-4 lg:pb-0 scrollbar-none justify-start lg:justify-center items-center lg:items-stretch select-none">
             {PROJECTS.map((project) => (
               <button
                 key={project.id}
                 onClick={() => setActiveProject(project)}
-                className={`w-full text-left p-6 rounded-2xl border transition-all duration-300 ${
+                className={`w-72 sm:w-80 lg:w-full shrink-0 lg:shrink text-left p-4 sm:p-6 rounded-2xl border transition-all duration-300 ${
                   activeProject.id === project.id
                     ? "bg-white/5 border-luxury-gold/45 shadow-xl"
                     : "border-transparent hover:bg-white/2 hover:border-white/10"
                 }`}
               >
                 <div className="flex items-center justify-between mb-2">
-                  <h3 className="font-serif text-lg font-light text-luxury-cream">
+                  <h3 className="font-serif text-base sm:text-lg font-light text-luxury-cream">
                     {project.title}
                   </h3>
                   {activeProject.id === project.id && (
@@ -95,7 +92,7 @@ export default function Transformations() {
           </div>
 
           {/* Project Details Display Card */}
-          <div className="col-span-12 lg:col-span-8 flex flex-col justify-between rounded-3xl overflow-hidden glassmorphism p-8 md:p-12 relative min-h-[500px]">
+          <div className="col-span-12 lg:col-span-8 flex flex-col justify-between rounded-3xl overflow-hidden glassmorphism p-6 sm:p-8 md:p-12 relative min-h-[480px] lg:min-h-[500px]">
             
             {/* Background Image Panel (Framer Motion Animation) */}
             <div className="absolute inset-0 z-0">
@@ -114,10 +111,10 @@ export default function Transformations() {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-8 h-full items-center">
+            <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 h-full items-center">
               
               {/* Text Info */}
-              <div className="space-y-6 flex flex-col justify-center">
+              <div className="space-y-4 md:space-y-6 flex flex-col justify-center">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeProject.id}
@@ -125,19 +122,19 @@ export default function Transformations() {
                     animate={{ opacity: 1, x: 0 }}
                     exit={{ opacity: 0, x: 20 }}
                     transition={{ duration: 0.4 }}
-                    className="space-y-4"
+                    className="space-y-3 sm:space-y-4"
                   >
-                    <span className="text-[10px] tracking-widest uppercase font-semibold text-luxury-gold bg-luxury-gold/10 px-3 py-1 rounded-full border border-luxury-gold/20 inline-block">
+                    <span className="text-[9px] sm:text-[10px] tracking-widest uppercase font-semibold text-luxury-gold bg-luxury-gold/10 px-3 py-1 rounded-full border border-luxury-gold/20 inline-block">
                       {activeProject.scope}
                     </span>
-                    <h3 className="font-serif text-3xl font-light text-luxury-cream">
+                    <h3 className="font-serif text-2xl sm:text-3xl font-light text-luxury-cream">
                       {activeProject.title}
                     </h3>
-                    <p className="text-xs sm:text-sm text-luxury-beige leading-relaxed font-light">
+                    <p className="text-[11px] sm:text-xs md:text-sm text-luxury-beige leading-relaxed font-light">
                       {activeProject.description}
                     </p>
 
-                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-xs">
+                    <div className="grid grid-cols-2 gap-4 pt-4 border-t border-white/10 text-[10px] sm:text-xs">
                       <div className="space-y-1">
                         <span className="text-luxury-beige/40 block uppercase tracking-wider font-semibold">Location</span>
                         <span className="text-luxury-cream font-light">{activeProject.location}</span>
@@ -152,7 +149,7 @@ export default function Transformations() {
               </div>
 
               {/* Photo Display with Eye overlay */}
-              <div className="relative h-64 md:h-[360px] rounded-2xl overflow-hidden border border-white/10 group">
+              <div className="relative h-48 sm:h-64 md:h-[360px] rounded-2xl overflow-hidden border border-white/10 group">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={activeProject.id}
@@ -184,8 +181,8 @@ export default function Transformations() {
             </div>
 
             {/* Bottom Actions */}
-            <div className="relative z-10 flex justify-between items-center border-t border-white/5 pt-6 mt-8">
-              <span className="text-xs text-luxury-gold font-light">Custom configurations available for high-end residential suites.</span>
+            <div className="relative z-10 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0 border-t border-white/5 pt-6 mt-8">
+              <span className="text-[10px] sm:text-xs text-luxury-gold font-light">Custom configurations available for high-end residential suites.</span>
               <a 
                 href="#contact" 
                 className="flex items-center gap-1.5 text-xs text-luxury-cream hover:text-luxury-gold transition-colors font-medium tracking-wider group"

@@ -26,7 +26,7 @@ export default function Hero() {
   return (
     <section 
       ref={containerRef}
-      className="relative h-screen w-full overflow-hidden bg-luxury-black flex items-center justify-center"
+      className="relative h-[100dvh] min-h-[660px] w-full overflow-hidden bg-luxury-black flex items-center justify-center"
     >
       {/* Background Image with Parallax & Dark Overlays */}
       <motion.div 
@@ -60,7 +60,7 @@ export default function Hero() {
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 1.4 }}
-            className="block font-serif text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-luxury-cream"
+            className="block font-serif text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-extralight tracking-tight text-luxury-cream"
           >
             Artistry in Wood
           </motion.span>
@@ -68,7 +68,7 @@ export default function Hero() {
             initial={{ y: "100%", opacity: 0 }}
             animate={{ y: 0, opacity: 0.9 }}
             transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 1.6 }}
-            className="block text-gold-gradient font-serif text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-normal italic tracking-wide mt-2"
+            className="block text-gold-gradient font-serif text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-normal italic tracking-wide mt-2"
           >
             Luxury Defined.
           </motion.span>
@@ -79,7 +79,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 1.8 }}
-          className="mt-8 max-w-2xl text-sm sm:text-base md:text-lg text-luxury-beige/80 font-light leading-relaxed tracking-wide"
+          className="mt-6 md:mt-8 max-w-2xl text-xs sm:text-sm md:text-lg text-luxury-beige/80 font-light leading-relaxed tracking-wide"
         >
           Experience handcrafted perfection. We design premium modular sofas, solid walnut beds, and custom interior transformations tailored for Hyderabad&apos;s finest homes.
         </motion.p>
@@ -89,7 +89,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 2.0 }}
-          className="mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
+          className="mt-8 md:mt-10 flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a
             href="#collections"
@@ -111,7 +111,7 @@ export default function Hero() {
         initial={{ opacity: 0, y: 50 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1], delay: 2.2 }}
-        className="absolute bottom-10 left-6 right-6 md:left-12 md:right-12 z-20 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4 border-t border-white/10 pt-6"
+        className="absolute bottom-6 md:bottom-10 left-6 right-6 md:left-12 md:right-12 z-20 max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 md:gap-4 border-t border-white/10 pt-4 md:pt-6"
       >
         <div className="flex items-center gap-3 text-luxury-beige/65 text-xs tracking-wider">
           <MapPin className="w-4 h-4 text-luxury-gold shrink-0" />

@@ -59,22 +59,22 @@ export default function InstaGrid() {
   return (
     <section 
       ref={ref}
-      className="py-28 px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-[#0C0C0C] border-b border-white/5"
     >
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             <span className="text-[10px] tracking-[0.3em] uppercase text-luxury-gold font-semibold font-sans flex items-center gap-2">
               <Instagram className="w-3.5 h-3.5" />
               Social Narrative
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-luxury-cream">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-luxury-cream">
               Instagram Stories
             </h2>
           </div>
-          <p className="max-w-md text-sm text-luxury-beige/70 font-light leading-relaxed">
+          <p className="max-w-md text-xs sm:text-sm text-luxury-beige/70 font-light leading-relaxed">
             Follow our digital showroom on Instagram for daily design updates, client walkthroughs, and custom furniture styling releases.
           </p>
         </div>

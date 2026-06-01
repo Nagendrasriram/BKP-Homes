@@ -55,14 +55,14 @@ export default function Navbar() {
         transition={{ duration: 0.8, delay: 1 }}
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-500 ${
           isScrolled 
-            ? "py-4 px-6 md:px-12" 
-            : "py-6 px-6 md:px-16"
+            ? "py-3 px-4 sm:px-6 md:px-12" 
+            : "py-4 px-4 sm:px-6 md:px-16"
         }`}
       >
         <div 
           className={`mx-auto max-w-7xl rounded-full transition-all duration-500 ${
             isScrolled 
-              ? "glassmorphism shadow-2xl px-6 py-3 border border-luxury-gold/15" 
+              ? "glassmorphism shadow-2xl px-4 py-2.5 sm:px-6 sm:py-3 border border-luxury-gold/15" 
               : "bg-transparent px-2 py-2 border border-transparent"
           } flex items-center justify-between`}
         >

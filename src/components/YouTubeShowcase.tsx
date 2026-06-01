@@ -42,22 +42,22 @@ export default function YouTubeShowcase() {
   return (
     <section 
       id="video-showcase" 
-      className="py-28 px-6 md:px-12 bg-luxury-black border-b border-white/5"
+      className="py-16 md:py-28 px-4 sm:px-6 md:px-12 bg-luxury-black border-b border-white/5"
     >
-      <div className="max-w-7xl mx-auto space-y-16">
+      <div className="max-w-7xl mx-auto space-y-12 md:space-y-16">
         
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             <span className="text-[10px] tracking-[0.3em] uppercase text-luxury-gold font-semibold font-sans flex items-center gap-2">
               <Youtube className="w-3.5 h-3.5" />
               Cinematic Tours
             </span>
-            <h2 className="font-serif text-4xl md:text-5xl font-light tracking-wide text-luxury-cream">
+            <h2 className="font-serif text-3xl md:text-5xl font-light tracking-wide text-luxury-cream">
               Showroom Walkthroughs
             </h2>
           </div>
-          <p className="max-w-md text-sm text-luxury-beige/70 font-light leading-relaxed">
+          <p className="max-w-md text-xs sm:text-sm text-luxury-beige/70 font-light leading-relaxed">
             Watch our high-production villa home tours and behind-the-scenes woodcraft documentaries to witness the precision of BKP standards.
           </p>
         </div>
@@ -169,7 +169,7 @@ export default function YouTubeShowcase() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-6"
+              className="fixed inset-0 z-50 flex items-center justify-center bg-black/95 p-4 sm:p-6"
             >
               {/* Close background trigger */}
               <div className="absolute inset-0" onClick={() => setActiveVideo(null)} />
@@ -203,11 +203,11 @@ export default function YouTubeShowcase() {
                 </div>
 
                 {/* Video Info under player */}
-                <div className="p-8 space-y-3 bg-[#0B0B0B]">
+                <div className="p-5 sm:p-8 space-y-2 bg-[#0B0B0B]">
                   <span className="text-[9px] uppercase tracking-[0.25em] text-luxury-gold font-semibold font-sans">
                     BKP HOMES • LUXURY MOVIE
                   </span>
-                  <h3 className="font-serif text-xl sm:text-2xl font-light text-luxury-cream">
+                  <h3 className="font-serif text-lg sm:text-2xl font-light text-luxury-cream">
                     {activeVideo.title}
                   </h3>
                   <p className="text-xs text-luxury-beige/70 font-light leading-relaxed">
